@@ -1,8 +1,22 @@
 ﻿using System;
-
-public class Class1
+namespace comando
 {
-	public Class1()
-	{
-	}
+    public class Enemy
+    {
+        string Name;
+        int Life;
+        bool Status;
+
+        public Enemy(string name)
+        {
+            Name = name;
+            Life = 100;
+            Status = true;
+        }
+        public void identification()
+        {
+            Console.WriteLine("I am an enemy");
+        }
+    }
+
 }
