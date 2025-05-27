@@ -3,8 +3,8 @@ namespace comando
 {
     public class Commando
     {
-        public string Name;
-        public string NameCode;
+        private string Name;
+        public string NameCode { get; set; }
         public string[] Tools;
         public string Stetus;
         public Commando(string name,string nameCode, string[] tools,string status)
@@ -28,6 +28,22 @@ namespace comando
         {
             Console.WriteLine($"{NameCode} went on the attack");
         }
+        public void SayName(string commanderRank)
+        {
+            if (commanderRank == "general")
+            {
+                Console.WriteLine(Name);
+            }
+            else if (commanderRank == "colonel")
+            {
+                Console.WriteLine(NameCode);
+            }
+            else
+            {
+                Console.WriteLine("Unable to provide information");
+            }
+        }
+        
     }
 }
 

@@ -17,6 +17,7 @@ namespace comando
             Console.WriteLine("shot");
             NumberOfBalls -= 1;
         }
+   
     }
 }
 
