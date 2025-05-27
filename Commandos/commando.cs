@@ -5,28 +5,28 @@ namespace comando
     {
         private string Name;
         public string NameCode { get; set; }
-        public string[] Tools;
-        public string Stetus;
-        public Commando(string name,string nameCode, string[] tools,string status)
+        public List<string> tools;
+        public string Status;
+        public Commando(string name,string nameCode, List<string> tools,string status)
         {
             Name = name;
             NameCode = nameCode;
-            Tools = tools;
-            Stetus = status;
+            this.tools = tools;
+            Status = status;
         }
         public void Walk()
         {
             Console.WriteLine("The soldier goes");
-            Stetus = "goes";
+            Status = "goes";
         }
         public void Hide()
         {
             Console.WriteLine("The soldier is hiding.");
-            Stetus = "hiding";
+            Status = "hiding";
         }
-        public void Attack()
+        public virtual void Attack()
         {
-            Console.WriteLine($"{NameCode} went on the attack");
+            Console.WriteLine($"The commando soldier {NameCode} went on the attack");
         }
         public void SayName(string commanderRank)
         {

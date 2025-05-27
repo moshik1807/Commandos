@@ -4,12 +4,16 @@ namespace comando
 {
     public class AirCommando: Commando
     {
-        public AirCommando(string Name, string NameCode, string[] Tools, string Stetus):base(string name, string nameCode, string[] tools, string status)
+        public AirCommando(string name, string nameCode, List<string> tools, string status):base( name,  nameCode,  tools,  status)
         {
         }
         public void parachuting()
         {
             Console.WriteLine("The soldier falls");
+        }
+        public override void Attack()
+        {
+            Console.WriteLine($"Air Commando Soldier {NameCode} went on the attack"); ;
         }
     }
 
