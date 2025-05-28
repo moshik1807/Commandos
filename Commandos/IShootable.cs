@@ -3,6 +3,6 @@ namespace comando
 {
     interface IShootable
     {
-        void Shoot();
+        public void Shoot();
     }
 }
