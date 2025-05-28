@@ -1,10 +1,17 @@
 ﻿using System;
 namespace comando
 {
-    public class M16: Weapon
+    public class M16: Weapon,IShootable
     {
-        public M16():base("m16", "COLT",29)
+        public int NumberOfBalls = 29;
+        public M16():base("m16", "COLT")
         {
         }
+        public void Shoot()
+        {
+            Console.WriteLine("shot");
+            NumberOfBalls --;
+        }
+
     }
 }
