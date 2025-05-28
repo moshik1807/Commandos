@@ -9,10 +9,13 @@ namespace comando
             switch (type)
             {
                 case "m16":
-                    weapons.Add(M16());
+                    weapons.Add(new M16());
                     break;
-                case "ak47";
-                    weapons.Add(AK47());
+                case "ak47":
+                    weapons.Add(new AK47());
+                    break;
+                default:
+                    break;
             }
         }
     }
